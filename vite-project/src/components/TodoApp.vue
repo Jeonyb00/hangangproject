@@ -24,15 +24,15 @@
   <script setup>
   import { ref } from 'vue';
   
-  // State
+
   const newTask = ref('');
   const tasks = ref([]);
   
-  // Methods
+
   const addTask = () => {
-    if (newTask.value.trim() === '') return; // 빈 입력 방지
+    if (newTask.value.trim() === '') return;
     tasks.value.push({ text: newTask.value, isEditing: false });
-    newTask.value = ''; // 입력 필드 초기화
+    newTask.value = '';
   };
   
   const editTask = (index) => {
